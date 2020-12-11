@@ -1,0 +1,83 @@
+saved_state = "../serverctl/state.json"
+log_level = "info"
+log_target = "stdout"
+command_socket = "../serverctl/sock"
+command_buffer_size = 16384
+max_command_buffer_size = 163840
+worker_count = 2
+worker_automatic_restart = true
+handle_process_affinity = false
+max_connections = 500
+max_buffers = 500
+buffer_size = 16384
+
+tls_provider = "rustls"
+
+activate_listeners= true
+
+[[listeners]]
+protocol = "http"
+address = "0.0.0.0:80"
+
+[[listeners]]
+protocol = "https"
+address = "0.0.0.0:443"
+
+tls_versions = ["TLSv1.3"]
+
+[applications]
+
+[applications.Black]
+
+protocol = "http"
+frontends = [
+  { address = "0.0.0.0:80", hostname = "black.allthings.red" },
+]
+backends = [
+  { address = "0.0.0.0:1024" },
+]
+
+[applications.Cad]
+protocol = "http"
+frontends = [
+  { address = "0.0.0.0:80", hostname = "cad.allthings.red" },
+]
+backends = [
+  { address = "0.0.0.0:1025" },
+]
+
+[applications.Christmas]
+protocol = "http"
+frontends = [
+  { address = "0.0.0.0:80", hostname = "allredchristmastraditions.allthings.red" },
+]
+backends = [
+  { address = "0.0.0.0:1026" },
+]
+
+[applications.Emby]
+protocol = "http"
+frontends = [
+  { address = "0.0.0.0:80", hostname = "media.allthings.red" },
+]
+backends = [
+  { address = "0.0.0.0:8096" },
+]
+
+[applications.Library]
+protocol = "http"
+frontends = [
+  { address = "0.0.0.0:80", hostname = "library.allthings.red" },
+]
+backends = [
+  { address = "0.0.0.0:1027" },
+]
+
+[applications.Pic]
+protocol = "http"
+frontends = [
+  { address = "0.0.0.0:443", hostname = "pic.allthings.red", certificate = "../certs/pic-cert.pem", key = "../certs/pic-key.pem", certificate_chain = "../certs/pic-fullchain.pem" },
+]
+backends = [
+  { address = "0.0.0.0:1028" },
+]
