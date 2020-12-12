@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 make_cmd_blacklist() {
-  local cmd_whitelist="[ ] bash cd curl cut echo env exit false grep groups kill logout ls ps python3 true whoami xargs"
+  local cmd_whitelist="[ ] bash cd cut echo env exit false grep groups kill logout ls ps true whoami xargs"
 
   # Can't whitelist a file if its folder is blacklisted.
   # So construct the blacklist more manually.

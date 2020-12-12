@@ -17,12 +17,7 @@ launch_static() {
 launch_static black-allthings-red 1024
 
 # [applications.Cad]
-cad_running="$(curl -s localhost:1025 2> /dev/null)"
-if [ -z "$cad_running" ]; then
-  cd $apps_dir/cad.allthings.red
-  echo launching cad.allthings.red
-  python3 -m http.server 1025 > /dev/null 2>&1 &
-fi
+launch_static cad-allthings-red 1025
 
 # [applications.Christmas]
 launch_static allredchristmastraditions.allthings.red 1026
