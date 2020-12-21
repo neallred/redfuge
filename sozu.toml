@@ -73,11 +73,20 @@ backends = [
   { address = "0.0.0.0:1027" },
 ]
 
+[applications.Lr]
+protocol = "http"
+frontends = [
+  { address = "0.0.0.0:80", hostname = "lr.allthings.red" },
+]
+backends = [
+  { address = "0.0.0.0:1028" },
+]
+
 [applications.Pic]
 protocol = "http"
 frontends = [
   { address = "0.0.0.0:443", hostname = "pic.allthings.red", certificate = "../certs/pic-cert.pem", key = "../certs/pic-key.pem", certificate_chain = "../certs/pic-fullchain.pem" },
 ]
 backends = [
-  { address = "0.0.0.0:1028" },
+  { address = "0.0.0.0:1029" },
 ]

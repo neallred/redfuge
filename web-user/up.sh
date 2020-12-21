@@ -13,23 +13,14 @@ launch_static() {
   fi
 }
 
-# [applications.Black]
+# [applications.Emby] not managed through web user
+
 launch_static black-allthings-red 1024
-
-# [applications.Cad]
 launch_static cad-allthings-red 1025
-
-# [applications.Christmas]
 launch_static allredchristmastraditions.allthings.red 1026
-
-# [applications.Emby]
-# don't need to do anything
-
-# [applications.Library]
 launch_static library.allthings.red 1027
-
-# [applications.Pic]
-PIC_DIR=$apps_dir/pic.allthings.red/pics launch_static pic.allthings.red/pic.allthings.red 1028
+launch_static lr-allthings-red 1028
+PIC_DIR=$apps_dir/pic.allthings.red/pics launch_static pic.allthings.red/pic.allthings.red 1029
 
 # Sozu reverse proxy
 sozu_running="$(ps ax | grep '[s]ozu')"

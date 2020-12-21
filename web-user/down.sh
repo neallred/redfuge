@@ -5,6 +5,7 @@ named_apps="black-allthings-red \
   cad-allthings-red \
   allredchristmastraditions.allthings.red \
   library.allthings.red \
+  lr.allthings.red \
   pic.allthings.red/pic.allthings.red"
 
 for app in $named_apps
