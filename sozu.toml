@@ -37,22 +37,13 @@ backends = [
   { address = "0.0.0.0:1024" },
 ]
 
-[applications.Cad]
-protocol = "http"
-frontends = [
-  { address = "0.0.0.0:80", hostname = "cad.allthings.red" },
-]
-backends = [
-  { address = "0.0.0.0:1025" },
-]
-
 [applications.Christmas]
 protocol = "http"
 frontends = [
   { address = "0.0.0.0:80", hostname = "allredchristmastraditions.allthings.red" },
 ]
 backends = [
-  { address = "0.0.0.0:1026" },
+  { address = "0.0.0.0:1025" },
 ]
 
 [applications.Emby]
@@ -70,7 +61,7 @@ frontends = [
   { address = "0.0.0.0:80", hostname = "library.allthings.red" },
 ]
 backends = [
-  { address = "0.0.0.0:1027" },
+  { address = "0.0.0.0:1026" },
 ]
 
 [applications.Lr]
@@ -79,7 +70,7 @@ frontends = [
   { address = "0.0.0.0:80", hostname = "lr.allthings.red" },
 ]
 backends = [
-  { address = "0.0.0.0:1028" },
+  { address = "0.0.0.0:1027" },
 ]
 
 [applications.Pic]
@@ -88,5 +79,5 @@ frontends = [
   { address = "0.0.0.0:443", hostname = "pic.allthings.red", certificate = "../certs/pic-cert.pem", key = "../certs/pic-key.pem", certificate_chain = "../certs/pic-fullchain.pem" },
 ]
 backends = [
-  { address = "0.0.0.0:1029" },
+  { address = "0.0.0.0:1028" },
 ]
