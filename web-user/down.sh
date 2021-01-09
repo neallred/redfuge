@@ -2,7 +2,6 @@
 user="$(whoami)"
 
 named_apps="black-allthings-red \
-  cad-allthings-red \
   allredchristmastraditions.allthings.red \
   library.allthings.red \
   lr.allthings.red \
