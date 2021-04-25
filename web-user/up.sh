@@ -6,7 +6,7 @@ launch_static() {
   local app=$1
   local port=$2
   local processname="$(echo $app | cut -c -15)"
-  local running="$(ps -u $user | grep $processname)"
+  local running="$(ps | grep $processname)"
   if [ -z "$running" ]; then
     echo launching $app
     $apps_dir/$app $port &
@@ -18,8 +18,9 @@ launch_static() {
 launch_static black-allthings-red 1024
 launch_static allredchristmastraditions.allthings.red 1025
 launch_static library.allthings.red 1026
-launch_static lr-allthings-red 1027
-PIC_DIR=$apps_dir/pic.allthings.red/pics launch_static pic.allthings.red/pic.allthings.red 1028
+launch_static loan-allthings-red 1027
+launch_static lr-allthings-red 1028
+PIC_DIR=$apps_dir/pic.allthings.red/pics launch_static pic.allthings.red/pic.allthings.red 1029
 
 # Sozu reverse proxy
 sozu_running="$(ps ax | grep '[s]ozu')"
